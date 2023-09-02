@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using FilmesApi.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace FilmesApi.Data.Dtos
 {
@@ -8,5 +9,6 @@ namespace FilmesApi.Data.Dtos
         public string Genero { get; set; }
         public int Duracao { get; set; }
         public DateTime HoraDaConsulta { get; set; } = DateTime.Now;
+        public ICollection<ReadSessaoDto> Sessoes { get; set; }
     }
 }
